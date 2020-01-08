@@ -29,7 +29,7 @@ import java.util.List;
 
 /**
  * 后台管理首页
- * Created by Administrator on 2017/3/9 009.
+ * Created by Administrator on 009.
  */
 @Controller("adminIndexController")
 @RequestMapping("/admin")
@@ -154,4 +154,19 @@ public class IndexController extends BaseController {
             return RestResponseBo.fail(msg);
         }
     }
+
+    @GetMapping("/login")
+    @ResponseBody
+    public RestResponseBo login(@RequestParam String username, @RequestParam String password, HttpServletRequest request,HttpSession session){
+        if (username != null && password != null){
+            UserVo userVo = userService.login(username,password);
+
+            if (userVo != null){
+                session.setAttribute("user",userVo);
+            }else {
+
+            }
+        }
+    }
+
 }

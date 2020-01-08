@@ -7,7 +7,7 @@ import com.my.blog.website.utils.MapCache;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by 13 on 2017/2/21.
+ *
  */
 public abstract class BaseController {
 

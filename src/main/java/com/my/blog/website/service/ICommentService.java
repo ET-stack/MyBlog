@@ -6,7 +6,7 @@ import com.my.blog.website.modal.Vo.CommentVoExample;
 import com.my.blog.website.modal.Bo.CommentBo;
 
 /**
- * Created by BlueT on 2017/3/16.
+ *
  */
 public interface ICommentService {
 
