@@ -27,6 +27,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
+import static com.my.blog.website.constant.WebConst.LOGIN_SESSION_KEY;
+
 /**
  * 后台管理首页
  * Created by Administrator on 009.
@@ -104,10 +106,10 @@ public class IndexController extends BaseController {
             logService.insertLog(LogActions.UP_INFO.getAction(), GsonUtils.toJsonString(temp), request.getRemoteAddr(), this.getUid(request));
 
             //更新session中的数据
-            UserVo original = (UserVo) session.getAttribute(WebConst.LOGIN_SESSION_KEY);
+            UserVo original = (UserVo) session.getAttribute(LOGIN_SESSION_KEY);
             original.setScreenName(screenName);
             original.setEmail(email);
-            session.setAttribute(WebConst.LOGIN_SESSION_KEY, original);
+            session.setAttribute(LOGIN_SESSION_KEY, original);
         }
         return RestResponseBo.ok();
     }
@@ -140,9 +142,9 @@ public class IndexController extends BaseController {
             logService.insertLog(LogActions.UP_PWD.getAction(), null, request.getRemoteAddr(), this.getUid(request));
 
             //更新session中的数据
-            UserVo original= (UserVo)session.getAttribute(WebConst.LOGIN_SESSION_KEY);
+            UserVo original= (UserVo)session.getAttribute(LOGIN_SESSION_KEY);
             original.setPassword(pwd);
-            session.setAttribute(WebConst.LOGIN_SESSION_KEY,original);
+            session.setAttribute(LOGIN_SESSION_KEY,original);
             return RestResponseBo.ok();
         } catch (Exception e){
             String msg = "密码修改失败";
@@ -155,18 +157,6 @@ public class IndexController extends BaseController {
         }
     }
 
-    @GetMapping("/login")
-    @ResponseBody
-    public RestResponseBo login(@RequestParam String username, @RequestParam String password, HttpServletRequest request,HttpSession session){
-        if (username != null && password != null){
-            UserVo userVo = userService.login(username,password);
 
-            if (userVo != null){
-                session.setAttribute("user",userVo);
-            }else {
-
-            }
-        }
-    }
 
 }
