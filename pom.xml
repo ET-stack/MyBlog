@@ -6,7 +6,7 @@
     <groupId>com.my.blog.website</groupId>
     <artifactId>my-blog</artifactId>
     <!-- now -->
-    <version>3.0.1-SNAPSHOT</version>
+    <version>3</version>
 
     <packaging>war</packaging>
 
@@ -193,25 +193,30 @@
             <artifactId>hutool-all</artifactId>
             <version>5.1.0</version>
         </dependency>
-
+        <!--aop-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
     </dependencies>
 
     <!-- 普通的maven打包方式 -->
     <build>
             <plugins>
+
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                          <version>2.1.5.RELEASE</version>
                 </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <configuration>
-                        <source>1.8</source>
-                        <target>1.8</target>
-                    </configuration>
-                </plugin>
+                <!--<plugin>-->
+                    <!--<groupId>org.apache.maven.plugins</groupId>-->
+                    <!--<artifactId>maven-compiler-plugin</artifactId>-->
+                    <!--<configuration>-->
+                        <!--<source>1.8</source>-->
+                        <!--<target>1.8</target>-->
+                    <!--</configuration>-->
+                <!--</plugin>-->
             </plugins>
         </build>
     <!-- 普通的maven打包方式 -->

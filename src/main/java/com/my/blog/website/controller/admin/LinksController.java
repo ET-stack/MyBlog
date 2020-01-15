@@ -1,5 +1,6 @@
 package com.my.blog.website.controller.admin;
 
+import com.my.blog.website.common.aop.LoginAop;
 import com.my.blog.website.controller.BaseController;
 import com.my.blog.website.exception.TipException;
 import com.my.blog.website.modal.Bo.RestResponseBo;
@@ -34,6 +35,7 @@ public class LinksController extends BaseController {
      * @return
      */
     @GetMapping(value = "")
+    @LoginAop
     public String index(HttpServletRequest request) {
         List<MetaVo> metas = metasService.getMetas(Types.LINK.getType());
         request.setAttribute("links", metas);
@@ -42,6 +44,7 @@ public class LinksController extends BaseController {
 
     @PostMapping(value = "save")
     @ResponseBody
+    @LoginAop
     @Transactional(rollbackFor = TipException.class)
     public RestResponseBo saveLink(@RequestParam String title, @RequestParam String url,
                                    @RequestParam String logo, @RequestParam Integer mid,
@@ -73,6 +76,7 @@ public class LinksController extends BaseController {
 
     @RequestMapping(value = "delete")
     @ResponseBody
+    @LoginAop
     @Transactional(rollbackFor = TipException.class)
     public RestResponseBo delete(@RequestParam int mid) {
         try {
