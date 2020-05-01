@@ -5,10 +5,7 @@ import com.my.blog.website.modal.Vo.MetaVo;
 
 import java.util.List;
 
-/**
- * 分类信息service接口
- *  2017/3/17.
- */
+
 public interface IMetaService {
     /**
      * 根据类型和名字查询项

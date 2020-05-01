@@ -9,11 +9,7 @@ import com.my.blog.website.modal.Vo.ContentVo;
 
 import java.util.List;
 
-/**
- * 站点服务
- *
- *  2017/2/23.
- */
+
 public interface ISiteService {
 
 

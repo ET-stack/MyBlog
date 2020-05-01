@@ -5,10 +5,7 @@ import com.my.blog.website.modal.Vo.OptionVo;
 import java.util.List;
 import java.util.Map;
 
-/**
- * options的接口
- *  2017/3/7.
- */
+
 public interface IOptionService {
 
     void insertOption(OptionVo optionVo);

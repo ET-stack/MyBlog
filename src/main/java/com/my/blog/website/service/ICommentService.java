@@ -5,9 +5,7 @@ import com.my.blog.website.modal.Vo.CommentVo;
 import com.my.blog.website.modal.Vo.CommentVoExample;
 import com.my.blog.website.modal.Bo.CommentBo;
 
-/**
- *
- */
+
 public interface ICommentService {
 
     /**

@@ -21,9 +21,7 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- */
+
 @Service
 public class CommentServiceImpl implements ICommentService {
     private static final Logger LOGGER = LoggerFactory.getLogger(CommentServiceImpl.class);

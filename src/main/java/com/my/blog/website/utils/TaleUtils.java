@@ -497,4 +497,8 @@ public class TaleUtils {
         File file = new File("");
         return file.getAbsolutePath() + "/";
     }
+
+    public static void main(String[] args) {
+        System.out.println(TaleUtils.MD5encode("admin"));
+    }
 }

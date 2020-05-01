@@ -3,9 +3,7 @@ package com.my.blog.website.service;
 import com.github.pagehelper.PageInfo;
 import com.my.blog.website.modal.Vo.AttachVo;
 
-/**
- * 2017/3/20.
- */
+
 public interface IAttachService {
     /**
      * 分页查询附件

@@ -15,7 +15,7 @@ import java.util.concurrent.Future;
 
 /**
  * 测试异步调用
- * Created by Administrator on 2017/3/6 006.
+ *
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

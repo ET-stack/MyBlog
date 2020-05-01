@@ -4,9 +4,7 @@ import com.github.pagehelper.PageInfo;
 import com.my.blog.website.modal.Vo.ContentVoExample;
 import com.my.blog.website.modal.Vo.ContentVo;
 
-/**
- * Created by Administrator on 2017/3/13 013.
- */
+
 public interface IContentService {
 
 //    /**

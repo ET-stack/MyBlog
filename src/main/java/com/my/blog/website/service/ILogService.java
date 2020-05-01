@@ -4,9 +4,7 @@ import com.my.blog.website.modal.Vo.LogVo;
 
 import java.util.List;
 
-/**
- *  2017/3/4.
- */
+
 public interface ILogService {
 
     /**

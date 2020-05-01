@@ -57,7 +57,7 @@ public class UserServiceImpl implements IUserService {
         if (count < 1) {
             throw new TipException("不存在该用户");
         }
-        String pwd = TaleUtils.MD5encode(username+password);
+        String pwd = TaleUtils.MD5encode(password);
         criteria.andPasswordEqualTo(pwd);
         List<UserVo> userVos = userDao.selectByExample(example);
         if (userVos.size()!=1) {

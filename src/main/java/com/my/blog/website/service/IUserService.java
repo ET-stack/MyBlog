@@ -2,9 +2,7 @@ package com.my.blog.website.service;
 
 import com.my.blog.website.modal.Vo.UserVo;
 
-/**
- *  .
- */
+
 public interface IUserService {
 
     /**

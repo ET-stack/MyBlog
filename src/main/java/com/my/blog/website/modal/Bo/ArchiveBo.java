@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- *  2017/2/23.
+ *
  */
 @Data
 public class ArchiveBo implements Serializable {

@@ -4,9 +4,7 @@ import com.my.blog.website.modal.Vo.RelationshipVoKey;
 
 import java.util.List;
 
-/**
- *  2017/3/18.
- */
+
 public interface IRelationshipService {
     /**
      * 按住键删除
